@@ -8,7 +8,12 @@ body {
 
 body {
   color: $foreground;
-  background: $background;
+  background: rgb(4, 3, 31);
+  background: linear-gradient(
+    120deg,
+    rgba(4, 3, 31, 1) 0%,
+    rgba(0, 13, 68, 1) 100%
+  );
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

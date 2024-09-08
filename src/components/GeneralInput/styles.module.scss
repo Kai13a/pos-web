@@ -1,0 +1,11 @@
+@import "@styles/colors";
+$border-color: #000000;
+
+.input[class*="MuiInput-root"] {
+  color: $input-foreground;
+  // padding
+  padding: 0.25rem 0.5rem;
+  // background is semi-transparent
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}

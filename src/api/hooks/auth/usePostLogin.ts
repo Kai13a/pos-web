@@ -1,10 +1,14 @@
 import { postLogin } from "@api/auth";
 import { useMutation } from "@tanstack/react-query";
-import { ILoginPayload } from "@types";
+import {
+  ILoginErrorResponse,
+  ILoginPayload,
+  ILoginSuccessResponse,
+} from "@types";
 
 export interface IUsePostLoginProps {
-  onSuccess?: () => void;
-  onError?: () => void;
+  onSuccess?: (data: ILoginSuccessResponse) => void;
+  onError?: (error: ILoginErrorResponse) => void;
 }
 
 export const usePostLogin = ({ onSuccess, onError }: IUsePostLoginProps) => {
