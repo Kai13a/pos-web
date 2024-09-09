@@ -1,0 +1,11 @@
+$border-color: #454545;
+
+.container {
+  border: 1px solid $border-color;
+  padding: 2rem;
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
