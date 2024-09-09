@@ -1,18 +1,21 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useCallback, useEffect } from "react";
 import { usePostCheckToken } from "@api/hooks";
 import { ICheckTokenSuccessResponse } from "@types";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect } from "react";
 
-export default function Home() {
+export default function DashboardLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const router = useRouter();
 
   // api callbacks
   const onSuccess = useCallback(
     (data: ICheckTokenSuccessResponse) => {
       if (data.isValid) {
-        router.push("/dashboard");
         return;
       }
       router.push("/login");
@@ -41,5 +44,5 @@ export default function Home() {
     });
   }, [mutate, router]);
 
-  return <div />;
+  return <>{children}</>;
 }
